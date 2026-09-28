@@ -464,3 +464,9 @@ footer {
         padding: 70px 5%
     }
 }
+
+.error {
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}

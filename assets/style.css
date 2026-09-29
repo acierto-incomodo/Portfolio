@@ -32,6 +32,10 @@ a {
     text-decoration: none
 }
 
+p {
+    text-align: justify;
+}
+
 .topbar {
     height: 76px;
     border-bottom: 1px solid var(--line);
@@ -469,4 +473,291 @@ footer {
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+/* =========================================
+   TABLA DE COMPETENCIAS
+   ========================================= */
+
+.competence-table-wrapper {
+    margin-top: 40px;
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: linear-gradient(145deg, #111318, #0d0f12);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Tabla */
+
+.competence-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+/* Cabecera */
+
+.competence-table thead {
+    background: #15171c;
+}
+
+.competence-table th {
+    padding: 18px 22px;
+    text-align: left;
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--line);
+}
+
+/* Celdas */
+
+.competence-table td {
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+/* Última fila */
+
+.competence-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Hover */
+
+.competence-table tbody tr {
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.competence-table tbody tr:hover {
+    background: rgba(233, 220, 0, 0.035);
+}
+
+/* Nombre de competencia */
+
+.competence-name {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* Categoría */
+
+.competence-category {
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* Nivel */
+
+.competence-level {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    border: 1px solid #3d3f46;
+    border-radius: 999px;
+    background: #0c0e11;
+    color: var(--text);
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.competence-level::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px rgba(233, 220, 0, 0.5);
+}
+
+/* Lista de tecnologías */
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.tech {
+    display: inline-flex;
+    padding: 5px 9px;
+    border-radius: 6px;
+    border: 1px solid #2d3037;
+    background: #0b0d10;
+    color: #c7c9ce;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    transition: 0.2s ease;
+}
+
+.tech:hover {
+    color: var(--accent);
+    border-color: #5d5800;
+    background: #15160b;
+}
+
+/* Tabla de competencias digitales */
+
+.digital-table {
+    margin-top: 40px;
+}
+
+.digital-table .competence-table th:first-child {
+    width: 40%;
+}
+
+.digital-table .competence-table th:nth-child(2) {
+    width: 15%;
+}
+
+.digital-table .competence-table th:nth-child(3) {
+    width: 45%;
+}
+
+/* Barra de nivel */
+
+.level-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.level-progress {
+    width: 120px;
+    height: 7px;
+    background: #202228;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.level-progress span {
+    display: block;
+    height: 100%;
+    width: 90%;
+    background: var(--accent);
+    border-radius: inherit;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .competence-table-wrapper {
+        border-radius: 12px;
+    }
+
+    .competence-table {
+        min-width: 650px;
+    }
+
+    .competence-table th,
+    .competence-table td {
+        padding: 14px 16px;
+    }
+
+    .level-progress {
+        width: 90px;
+    }
+}
+
+/* =========================================
+   TABLAS DE COMPETENCIAS - SCROLL MÓVIL
+   ========================================= */
+
+.competence-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    border: 1px solid var(--line);
+    border-radius: 16px;
+
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,.025),
+        rgba(255,255,255,.01)
+    );
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.25);
+
+    /* Evita que el scroll horizontal afecte a toda la página */
+    overscroll-behavior-x: contain;
+
+    /* Desplazamiento suave */
+    scroll-behavior: smooth;
+
+    /* Para Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--panel2);
+}
+
+
+/* Barra de desplazamiento para Chrome / Edge / Chromium */
+
+.competence-table-wrapper::-webkit-scrollbar {
+    height: 9px;
+}
+
+.competence-table-wrapper::-webkit-scrollbar-track {
+    background: var(--panel2);
+    border-radius: 999px;
+}
+
+.competence-table-wrapper::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 999px;
+    border: 2px solid var(--panel2);
+}
+
+.competence-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #fff200;
+}
+
+
+/* La tabla puede ser más ancha que la pantalla */
+
+.competence-table {
+    width: 100%;
+    min-width: 750px;
+    border-collapse: collapse;
+}
+
+
+/* =========================================
+   MÓVIL
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .competence-table-wrapper {
+        margin-top: 18px;
+
+        /* Un poco más de espacio para poder agarrar el scroll */
+        padding-bottom: 4px;
+
+        /* Permite deslizar con el dedo */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .competence-table {
+        min-width: 700px;
+    }
+
+    .competence-table th,
+    .competence-table td {
+        padding: 14px 16px;
+    }
 }

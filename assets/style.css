@@ -468,7 +468,9 @@ footer {
     }
 }
 
-.error h1,h2,p {
+.error h1,
+h2,
+p {
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;

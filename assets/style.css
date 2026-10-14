@@ -397,7 +397,8 @@ h2 span {
     background: #101216;
     border: 1px dashed #343740;
     border-radius: 12px;
-    padding: 20px
+    padding: 20px;
+    text-align: justify;
 }
 
 .reflection b {
@@ -406,7 +407,14 @@ h2 span {
 
 .reflection p {
     color: var(--muted);
-    margin-bottom: 0
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: justify;
+
+}
+
+.reflection-text {
+    text-align: justify;
 }
 
 footer {

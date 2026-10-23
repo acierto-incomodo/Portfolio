@@ -848,6 +848,17 @@ p {
     opacity: 1;
 }
 
+.proyectos .enlaces {
+    margin-left: 65px;
+    display: flex;
+    flex-direction: column;
+}
+
+.proyectos .enlaces a {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
 
 /* =========================================
    NÚMERO

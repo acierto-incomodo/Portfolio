@@ -73,14 +73,15 @@
 }
 
 .proyectos .enlaces {
-    margin-left: 65px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .proyectos .enlaces a {
     color: var(--accent);
     text-decoration: underline;
+    padding-left: 10px;
 }
 
 
